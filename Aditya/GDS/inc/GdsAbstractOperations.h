@@ -3,4 +3,11 @@
 
 #include "GdsCommon.h"
 
+class GdsOperationsBase {
+
+public:
+    int search();
+    int sort();
+};
+
 #endif // __GdsAbstractOperations__
