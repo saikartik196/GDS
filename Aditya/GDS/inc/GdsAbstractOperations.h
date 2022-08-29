@@ -6,8 +6,8 @@
 class GdsOperationsBase {
 
 public:
-    int search();
-    int sort();
+    virtual int search() = 0;
+    virtual int sort() = 0;
 };
 
 #endif // __GdsAbstractOperations__
