@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "GdsNodes.h"
+#include "../inc/GdsNodes.h"
 int main()
 {
     

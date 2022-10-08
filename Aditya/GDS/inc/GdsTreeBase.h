@@ -2,16 +2,20 @@
 #define __GdsTreeBase__
 
 #include "GdsCommon.h"
-
-#endif // __GdsTreeBASE__
+#include "GdsNodes.h"
 
 /**
  * Tree Base class would be needed 
  */
 class TreeBase {
 
+
 public:
+// Node of a tree
+
+
 
 private:
 
 };
+#endif // __GdsTreeBASE__

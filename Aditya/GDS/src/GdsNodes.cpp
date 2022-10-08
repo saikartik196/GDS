@@ -4,15 +4,22 @@
 template <typename nodeDataClass> NodeOfTree<nodeDataClass>::NodeOfTree(nodeDataClass arr[], int s)
 {
     //ptr = new T[s];
-    size = s;
-    for (int i = 0; i < size; i++){
-        ptr[i] = new NodeOfTree();
-        ptr[i]->mData = arr[i];
+    mSize = s;
+    for (int i = 0; i < mSize; i++){
+        ptrNodeArray[i] = new NodeOfTree();
+        ptrNodeArray[i]->mData = arr[i];
     }
 }
 
 template <typename nodeDataClass> NodeOfTree<nodeDataClass>::NodeOfTree(nodeDataClass aValue){
+    mSize = 2; // default size is 2 , 
     mData = aValue;
+}
+
+
+template <typename nodeDataClass> NodeOfTree<nodeDataClass>::NodeOfTree(int aSize){
+       mSize = aSize; // we make the default tree as Binary Search Tree; 
+       ptrNodeArray = std::make_unique<int[]>(aSize);
 }
 
 
