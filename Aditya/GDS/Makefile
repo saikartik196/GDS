@@ -22,6 +22,8 @@ DEP = $(OBJ:$(OBJDIR)/%.o=%.d)
 # UNIX-based OS variables & settings
 RM = rm
 DELOBJ = $(OBJ)
+MKDIR = mkdir
+MKDIROBJ = $(OBJDIR)
 # Windows OS variables & settings
 DEL = del
 EXE = .exe
@@ -32,7 +34,7 @@ WDELOBJ = $(SRC:$(SRCDIR)/%$(EXT)=$(OBJDIR)\\%.o)
 ########################################################################
 
 all: $(APPNAME)
-
+# create OBJ DIR
 # Builds the app
 $(APPNAME): $(OBJ)
 	$(CC) $(INC) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)

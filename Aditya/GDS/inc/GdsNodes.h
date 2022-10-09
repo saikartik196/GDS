@@ -23,7 +23,38 @@ public:
     Data<nodeDataClass> mData;
 };
 
+enum class KindOfNode{ROOT,PARENT,LEAF};
+enum class NodePropertyKey{NODE_DEPTH,NODE_HEIGHT,NODE_DEGREE};
 
+class NodeProperties{
+
+public:
+    // ROOT,PARENT,LEAF
+    KindOfNode mNodeTyep;
+
+    //Depth of a node
+    unsigned int mNodeDepth;
+
+    //Height of a node
+    unsigned int mHeightOfNode;
+    
+    //Degree of a Node
+    unsigned int mDegreeOfNode;
+
+public:
+    void setNodeProperty(NodePropertyKey aNodePropKey, int aNodePropValue);
+
+};
+
+class TreeProperties{
+
+    //number of edges
+    unsigned int mNumberOfEdges;
+
+    //Height of the Tree
+    unsigned int mHeightOfTree;
+
+};
 /**
  * NodeOfTree :  declartation for the node for a tree
  * 1. Node should contain the pointer to the Left branch and Right Brach of the tree below
@@ -37,6 +68,7 @@ private:
     // if size > 2 then its tree which has more children     
     int mSize;
 
+
     //pointer to the Child nodes 
     NodeOfTree* ptrNodeArray;
     
@@ -49,7 +81,7 @@ public:
     // Node for the default 
     NodeOfTree();
 
-    // Node with a size and default size of children is 2 
+    // Node with a size and default size of children is 0 
     NodeOfTree(int aSize = 0);
     
     //
@@ -58,7 +90,7 @@ public:
     //
     NodeOfTree(nodeDataClass arr[], int numberOfChildern);
 
-//Member functions
+//Member functionsw
 // getdata 
     void getData(nodeDataClass *ptr);
 
